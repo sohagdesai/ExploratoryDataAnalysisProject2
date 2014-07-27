@@ -1,0 +1,17 @@
+library(graphics)
+plot2 <- function() {
+        NEI <- readRDS("summarySCC_PM25.rds")
+        sBaltCity99 <- sum(NEI$Emissions[NEI$year == 1999 & NEI$fips == 24510])
+        sBaltCity02 <- sum(NEI$Emissions[NEI$year == 2002 & NEI$fips == 24510])
+        sBaltCity05 <- sum(NEI$Emissions[NEI$year == 2005 & NEI$fips == 24510])
+        sBaltCity08 <- sum(NEI$Emissions[NEI$year == 2008 & NEI$fips == 24510])
+        NEIBaltCity99 <- c("Total.Emissions" = as.numeric(sBaltCity99),"year" = as.integer("1999"))
+        NEIBaltCity02 <- c("Total.Emissions" = as.numeric(sBaltCity02),"year" = as.integer("2002"))
+        NEIBaltCity05 <- c("Total.Emissions" = as.numeric(sBaltCity05),"year" = as.integer("2005"))
+        NEIBaltCity08 <- c("Total.Emissions" = as.numeric(sBaltCity08),"year" = as.integer("2008"))
+        NEIBaltCitysummary <- rbind(NEIBaltCity99,NEIBaltCity02,NEIBaltCity05,NEIBaltCity08)
+        png(filename = "plot2.png")
+        options(scipen=10)
+        barplot(NEIBaltCitySummary[,"Total.Emissions"],names=NEIBaltCitySummary[,"year"],xlab="Year",ylab="Total Emmissions for Baltimore City")
+        dev.off()
+}
