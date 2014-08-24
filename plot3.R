@@ -60,77 +60,86 @@ plot3 <- function() {
                                     [NEIBaltCity$type == "NON-ROAD" & 
                                              NEIBaltCity$year == 2008])
 
+        # NEIBaltCitySummary <- data.frame ("Emission" = numeric(4),
+        #                                  "type" = character(4),
+        #                                  "year" = numeric(4),
+        #                                  stringsAsFactors=FALSE)
+        
         # Construct a table with the sums for source type = "POINT"
-        NEIBaltCitySummary = rbind(NEIBaltCitySummary,
-                                   c("Emission" = NEIBaltCityPoint99,
-                                     "type" = "POINT", 
-                                     "year" = 1999))
-        NEIBaltCitySummary = rbind(NEIBaltCitySummary,
-                                   c("Emission" = NEIBaltCityPoint02,
-                                     "type" = "POINT", 
-                                     "year" = 2002))
-        NEIBaltCitySummary = rbind(NEIBaltCitySummary,
-                                   c("Emission" = NEIBaltCityPoint05,
-                                     "type" = "POINT", 
-                                     "year" = 2005))
-        NEIBaltCitySummary = rbind(NEIBaltCitySummary,
-                                   c("Emission" = NEIBaltCityPoint08,
-                                     "type" = "POINT", 
-                                     "year" = 2008))
+        # NEIBaltCitySummary <- rbind(NEIBaltCitySummary,
+        #                            list("Emission" = NEIBaltCityPoint99,
+        #                                 "type" = "POINT", 
+        #                                 "year" = 1999))
+        NEIBaltCitySummary <- c("Emission" = NEIBaltCityPoint99,
+                                   "type" = "POINT", 
+                                   "year" = 1999)
+        
+        NEIBaltCitySummary <- rbind(NEIBaltCitySummary,
+                                    c("Emission" = NEIBaltCityPoint02,
+                                         "type" = "POINT", 
+                                         "year" = 2002))
+        NEIBaltCitySummary <- rbind(NEIBaltCitySummary,
+                                    c("Emission" = NEIBaltCityPoint05,
+                                         "type" = "POINT", 
+                                         "year" = 2005))
+        NEIBaltCitySummary <- rbind(NEIBaltCitySummary,
+                                    c("Emission" = NEIBaltCityPoint08,
+                                         "type" = "POINT", 
+                                         "year" = 2008))
         
         # Construct a table with the sums for source type = "NONPOINT"
-        NEIBaltCitySummary = rbind(NEIBaltCitySummary,
-                                   c("Emission" = NEIBaltCityNonPoint99,
-                                     "type" = "NONPOINT", 
-                                     "year" = 1999))
-        NEIBaltCitySummary = rbind(NEIBaltCitySummary,
-                                   c("Emission" = NEIBaltCityNonPoint02,
-                                     "type" = "NONPOINT", 
-                                     "year" = 2002))
-        NEIBaltCitySummary = rbind(NEIBaltCitySummary,
-                                   c("Emission" = NEIBaltCityNonPoint05,
-                                     "type" = "NONPOINT", 
-                                     "year" = 2005))
-        NEIBaltCitySummary = rbind(NEIBaltCitySummary,
-                                   c("Emission" = NEIBaltCityNonPoint08,
-                                     "type" = "NONPOINT", 
-                                     "year" = 2008))
+        NEIBaltCitySummary <- rbind(NEIBaltCitySummary,
+                                    c("Emission" = NEIBaltCityNonPoint99,
+                                         "type" = "NONPOINT", 
+                                         "year" = 1999))
+        NEIBaltCitySummary <- rbind(NEIBaltCitySummary,
+                                    c("Emission" = NEIBaltCityNonPoint02,
+                                         "type" = "NONPOINT", 
+                                         "year" = 2002))
+        NEIBaltCitySummary <- rbind(NEIBaltCitySummary,
+                                    c("Emission" = NEIBaltCityNonPoint05,
+                                         "type" = "NONPOINT", 
+                                         "year" = 2005))
+        NEIBaltCitySummary <- rbind(NEIBaltCitySummary,
+                                    c("Emission" = NEIBaltCityNonPoint08,
+                                         "type" = "NONPOINT", 
+                                         "year" = 2008))
         
         # Construct a table with the sums for source type = "NON-ROAD"
-        NEIBaltCitySummary = rbind(NEIBaltCitySummary,
-                                   c("Emission" = NEIBaltCityNonRoad99,
-                                     "type" = "NON-ROAD", 
-                                     "year" = 1999))
-        NEIBaltCitySummary = rbind(NEIBaltCitySummary,
-                                   c("Emission" = NEIBaltCityNonRoad02,
-                                     "type" = "NON-ROAD", 
-                                     "year" = 2002))
-        NEIBaltCitySummary = rbind(NEIBaltCitySummary,
-                                   c("Emission" = NEIBaltCityNonRoad05,
-                                     "type" = "NON-ROAD", 
-                                     "year" = 2005))
-        NEIBaltCitySummary = rbind(NEIBaltCitySummary,
-                                   c("Emission" = NEIBaltCityNonRoad08,
-                                     "type" = "NON-ROAD", 
-                                     "year" = 2008))
+        NEIBaltCitySummary <- rbind(NEIBaltCitySummary,
+                                    c("Emission" = NEIBaltCityNonRoad99,
+                                         "type" = "NON-ROAD", 
+                                         "year" = 1999))
+        NEIBaltCitySummary <- rbind(NEIBaltCitySummary,
+                                    c("Emission" = NEIBaltCityNonRoad02,
+                                         "type" = "NON-ROAD", 
+                                         "year" = 2002))
+        NEIBaltCitySummary <- rbind(NEIBaltCitySummary,
+                                    c("Emission" = NEIBaltCityNonRoad05,
+                                         "type" = "NON-ROAD", 
+                                         "year" = 2005))
+        NEIBaltCitySummary <- rbind(NEIBaltCitySummary,
+                                    c("Emission" = NEIBaltCityNonRoad08,
+                                         "type" = "NON-ROAD", 
+                                         "year" = 2008))
         
         # Construct a table with the sums for source type = "ON-ROAD"
-        NEIBaltCitySummary = rbind(NEIBaltCitySummary,
-                                   c("Emission" = NEIBaltCityOnRoad99,
-                                     "type" = "ON-ROAD", 
-                                     "year" = 1999))
-        NEIBaltCitySummary = rbind(NEIBaltCitySummary,
-                                   c("Emission" = NEIBaltCityOnRoad02,
-                                     "type" = "ON-ROAD", 
-                                     "year" = 2002))
-        NEIBaltCitySummary = rbind(NEIBaltCitySummary,
-                                   c("Emission" = NEIBaltCityOnRoad05,
-                                     "type" = "ON-ROAD", 
-                                     "year" = 2005))
-        NEIBaltCitySummary = rbind(NEIBaltCitySummary,
-                                   c("Emission" = NEIBaltCityOnRoad08,
-                                     "type" = "ON-ROAD", 
-                                     "year" = 2008))
+        NEIBaltCitySummary <- rbind(NEIBaltCitySummary,
+                                    c("Emission" = NEIBaltCityOnRoad99,
+                                         "type" = "ON-ROAD", 
+                                         "year" = 1999))
+        NEIBaltCitySummary <- rbind(NEIBaltCitySummary,
+                                    c("Emission" = NEIBaltCityOnRoad02,
+                                         "type" = "ON-ROAD", 
+                                         "year" = 2002))
+        NEIBaltCitySummary <- rbind(NEIBaltCitySummary,
+                                    c("Emission" = NEIBaltCityOnRoad05,
+                                         "type" = "ON-ROAD", 
+                                         "year" = 2005))
+        NEIBaltCitySummary <- rbind(NEIBaltCitySummary,
+                                    c("Emission" = NEIBaltCityOnRoad08,
+                                         "type" = "ON-ROAD", 
+                                         "year" = 2008))
 
         # Make a plot to a PNG file
         png(filename = "plot3.png", width = 640)
