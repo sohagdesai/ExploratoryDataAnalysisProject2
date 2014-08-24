@@ -28,7 +28,7 @@ plot1 <- function() {
         barplot(NEIsummary[,"Total.Emissions"],
                 names=NEIsummary[,"year"],
                 xlab="Year",
-                ylab="Emissions",
+                ylab="Emissions (Tons)",
                 main="Total PM2.5 Emissions from All Sources by Year")
         dev.off()
 }

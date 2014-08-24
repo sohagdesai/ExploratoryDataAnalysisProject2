@@ -31,6 +31,7 @@ plot2 <- function() {
         barplot(NEIBaltCitySummary[,"Total.Emissions"],
                 names=NEIBaltCitySummary[,"year"],
                 xlab="Year",
-                ylab="Total Emmissions for Baltimore City")
+                ylab="Emissions (Tons)",
+                main="Total PM2.5 Emissions from All Sources for Baltimore City by Year")
         dev.off()
 }
