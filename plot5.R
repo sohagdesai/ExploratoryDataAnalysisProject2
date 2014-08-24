@@ -1,4 +1,4 @@
-library(ggplot2)
+library(graphics)
 plot5 <- function() {
         # Read in data and subset it to the city of interest (Baltimore City)
         NEI <- readRDS("summarySCC_PM25.rds")
