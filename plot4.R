@@ -52,7 +52,8 @@ plot4 <- function() {
         barplot(NEICoalSourcesSummary[,"Total.Emissions"],
                 names=NEICoalSourcesSummary[,"year"],
                 xlab="Year",
-                ylab="Year to Year Emission Trend for Coal Sources"
+                ylab="Total Emissions (Coal Sources)",
+                main="Year to Year Emission Trend for Coal Sources"
         )
         dev.off()
 }
